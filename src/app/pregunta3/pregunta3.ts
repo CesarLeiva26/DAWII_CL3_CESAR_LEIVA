@@ -1,4 +1,6 @@
 export interface Pregunta3{
     id:number,
-    url:string
+    name:string,
+    status:string,
+    species:string
 }

@@ -1,14 +1,15 @@
 <div class="container">
-    <h2>Calculadora de Salario Semanal</h2>
-    <form>
-      <div class="form-group">
-        <label for="horasTrabajadas">Horas Trabajadas:</label>
-        <input type="number" id="horasTrabajadas" [(ngModel)]="horasTrabajadas" name="horasTrabajadas">
-      </div>
-      <button type="button" (click)="calcularSalario()">Calcular Salario</button>
-    </form>
-    <div *ngIf="salario > 0">
-      <p>Salario Semanal: {{ salario | currency: 'USD' }}</p>
+  <h2>Calculadora de Salario Semanal</h2>
+  <form>
+    <div class="form-group">
+      <mat-form-field appearance="outline">
+        <mat-label>Horas Trabajadas:</mat-label>
+        <input matInput type="number" id="horasTrabajadas" [(ngModel)]="horasTrabajadas" name="horasTrabajadas">
+      </mat-form-field>
     </div>
+    <button mat-raised-button color="primary" type="button" (click)="calcularSalario()">Calcular Salario</button>
+  </form>
+  <div *ngIf="salario > 0">
+    <p>Salario Semanal: {{ salario | currency: 'S/.' }}</p>
   </div>
-  
+</div>

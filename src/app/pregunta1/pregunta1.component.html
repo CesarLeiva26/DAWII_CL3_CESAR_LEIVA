@@ -1,18 +1,21 @@
 <div class="container">
-    <h2>Calculadora de Compras</h2>
-    <form>
-      <div class="form-group">
-        <label for="precioUnitario">Precio Unitario:</label>
-        <input type="number" id="precioUnitario" [(ngModel)]="precioUnitario" name="precioUnitario">
-      </div>
-      <div class="form-group">
-        <label for="cantidad">Cantidad:</label>
-        <input type="number" id="cantidad" [(ngModel)]="cantidad" name="cantidad">
-      </div>
-      <button type="button" (click)="calcularTotal()">Calcular Total</button>
-    </form>
-    <div *ngIf="total > 0">
-      <p>Total a Pagar: {{ total | currency: 'S/.' }}</p>
+  <h2>Calculadora de Compras</h2>
+  <form>
+    <div class="form-group">
+      <mat-form-field appearance="outline">
+        <mat-label>Precio Unitario:</mat-label>
+        <input matInput type="number" id="precioUnitario" [(ngModel)]="precioUnitario" name="precioUnitario">
+      </mat-form-field>
     </div>
+    <div class="form-group">
+      <mat-form-field appearance="outline">
+        <mat-label>Cantidad:</mat-label>
+        <input matInput type="number" id="cantidad" [(ngModel)]="cantidad" name="cantidad">
+      </mat-form-field>
+    </div>
+    <button mat-raised-button color="primary" type="button" (click)="calcularTotal()">Calcular Total</button>
+  </form>
+  <div *ngIf="total > 0">
+    <p>Total a Pagar: {{ total | currency: 'S/.' }}</p>
   </div>
-  
+</div>
