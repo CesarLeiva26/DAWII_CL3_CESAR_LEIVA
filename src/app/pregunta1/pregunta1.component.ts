@@ -1,4 +1,3 @@
-// pregunta1.component.ts
 import { Component } from '@angular/core';
 
 @Component({
@@ -13,11 +12,11 @@ export class Pregunta1Component {
 
   calcularTotal(): void {
     if (this.cantidad > 20) {
-      this.total = this.precioUnitario * this.cantidad * 0.9; // 10% de descuento
+      this.total = this.precioUnitario * this.cantidad * 0.9;
     } else if (this.cantidad > 10) {
-      this.total = this.precioUnitario * this.cantidad * 0.95; // 5% de descuento
+      this.total = this.precioUnitario * this.cantidad * 0.95;
     } else {
-      this.total = this.precioUnitario * this.cantidad; // Sin descuento
+      this.total = this.precioUnitario * this.cantidad;
     }
   }
 }
